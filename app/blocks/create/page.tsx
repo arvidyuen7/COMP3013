@@ -1,14 +1,19 @@
 import Link from "next/link";
+import { prisma } from "@/database";
+import { redirect } from "next/navigation";
+import { createBlock } from "@/app/api";
 
 export default function CreateBlock() {
+
+
   return (
     <div>
       <Link href="/">Go back Home</Link>
-      <form>
+      <form action={ createBlock }>
         <div>
-          <input type="text" placeholder="Block Title" />
+          <input name="title" type="text" placeholder="Block Title" />
         </div>
-        <textarea placeholder="your code goes here..."></textarea>
+        <textarea name="code" placeholder="your code goes here..."></textarea>
         <button>Create</button>
       </form>
     </div>
