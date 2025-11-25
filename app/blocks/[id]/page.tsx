@@ -16,7 +16,12 @@ export default async function ShowBlock({params}: Props) {
     return (
         <main className="min-h-screen bg-gray-50 p-8">
         <div className="max-w-2xl mx-auto">
+            <Link href="/">Go back Home</Link>
+            <Link href={`/blocks/${id}/edit`}>Edit the code block</Link>
+            <Link href="/">Delete the code block</Link>
             <h1>The block title is: {block.title}!</h1>
+            <p>The code is:</p>
+            <p>{block.code}</p>
         </div>
         </main>
     );

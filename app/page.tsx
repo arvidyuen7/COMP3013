@@ -18,7 +18,7 @@ export default function Home() {
 
 async function BlocksList() {
   const blocks = await prisma.block.findMany();
-  await setTimeout(5000);
+  // await setTimeout(5000);
   return (
     <main className="min-h-screen bg-gray-50 p-8">
       <div className="max-w-2xl mx-auto">
@@ -29,12 +29,6 @@ async function BlocksList() {
             className="inline-block px-4 py-2 text-sm font-medium text-white bg-blue-600 rounded-lg hover:bg-blue-700 transition"
           >
             + Create Block
-          </Link>
-          <Link
-            href="/blocks/view"
-            className="inline-block px-4 py-2 text-sm font-medium text-white bg-blue-600 rounded-lg hover:bg-blue-700 transition"
-          >
-            View Block
           </Link>
         </header>
 
